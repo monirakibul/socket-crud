@@ -5,7 +5,7 @@ require("dotenv").config();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const http = require("http")
 const socketIO = require("socket.io");
-
+const port = process.env.PORT || 5000;
 app.use(cors());
 
 
@@ -71,6 +71,6 @@ async function run() {
 }
 run().catch(console.dir)
 
-server.listen(5000, () => {
+server.listen(port, () => {
     console.log("Server is running");
 })
