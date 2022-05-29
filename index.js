@@ -9,8 +9,7 @@ const socketIO = require("socket.io");
 app.use(cors());
 
 
-const server = http.createServer(app)
-    ;
+const server = http.createServer(app);
 
 
 const io = socketIO(server, {
